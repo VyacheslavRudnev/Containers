@@ -26,5 +26,8 @@
     <ClInclude Include="libarary.h">
       <Filter>internal</Filter>
     </ClInclude>
+    <ClInclude Include="priority_queue.h">
+      <Filter>domain\model</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
