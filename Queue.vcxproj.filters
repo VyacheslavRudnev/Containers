@@ -29,5 +29,8 @@
     <ClInclude Include="priority_queue.h">
       <Filter>domain\model</Filter>
     </ClInclude>
+    <ClInclude Include="single_link_list.h">
+      <Filter>domain\model</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
