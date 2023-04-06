@@ -13,15 +13,15 @@ public:
 };
 
 template <typename T>
-class single_linked_list
+class doubly_linked_list
 {
 private:
 	Element<T>* _head;
 	Element<T>* _tail;
 	int _size;
 public:
-	single_linked_list() : _head(nullptr), _tail(nullptr), _size(0) {}
-	~single_linked_list()
+	doubly_linked_list() : _head(nullptr), _tail(nullptr), _size(0) {}
+	~doubly_linked_list()
 	{
 		Element<T>* temp = _head;
 		while (temp != nullptr)
