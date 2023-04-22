@@ -67,7 +67,7 @@ public:
       }
     }
   }
-  int count() { return back_index; }
+  int count() { return back_index + 1; }
   int memmory() { return _size; }
   bool isEmpty() { return (back_index <= 0) ? true : false; }
   bool isFull() { return (back_index == _size) ? true : false; }
