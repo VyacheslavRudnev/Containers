@@ -92,7 +92,7 @@ public:
 	}
 	int count()
 	{
-		return back_index;
+		return back_index+1;
 	}
 	int memmory()
 	{
