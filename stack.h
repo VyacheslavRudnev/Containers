@@ -58,5 +58,6 @@ public:
   }
   int get_full_size() { return size; }
   bool isEmpty() { return (top_elem <= 0) ? true : false; }
+
   bool isFull() { return (top_elem == size) ? true : false; }
 };
