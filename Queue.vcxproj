@@ -136,8 +136,10 @@
     <ClInclude Include="libarary.h" />
     <ClInclude Include="priority_queue.h" />
     <ClInclude Include="queue.h" />
+    <ClInclude Include="queue_2.h" />
     <ClInclude Include="single_link_list.h" />
     <ClInclude Include="stack.h" />
+    <ClInclude Include="stack_2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

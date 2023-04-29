@@ -26,6 +26,7 @@ public:
     this->conatiner = new T[size];
   }
   ~stack() { delete[] conatiner; }
+ 
   void push(T elem) {
     if (isFull()) {
       extend_memmory();

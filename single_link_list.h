@@ -9,15 +9,15 @@ public:
   ~Element() = default;
 };
 
-template <typename T> class doubly_linked_list {
+template <typename T> class queue {
 private:
   Element<T> *_head;
   Element<T> *_tail;
   int _size;
 
 public:
-  doubly_linked_list() : _head(nullptr), _tail(nullptr), _size(0) {}
-  ~doubly_linked_list() {
+    queue() : _head(nullptr), _tail(nullptr), _size(0) {}
+  ~queue() {
     Element<T> *temp = _head;
     while (temp != nullptr) {
       temp = temp->next;
@@ -38,7 +38,7 @@ public:
     }
     _size++;
   }
-  void push_front(T value) {
+  /*void push_front(T value) {
     Element<T> *temp = new Element<T>(value);
     if (_head == nullptr) {
       _head = temp;
@@ -48,8 +48,8 @@ public:
       _head = temp;
     }
     _size++;
-  }
-  void pop_back() {
+  }*/
+  /*void pop_back() {
     if (_head == nullptr) {
       return;
     } else if (_head == _tail) {
@@ -66,7 +66,7 @@ public:
       _tail->next = nullptr;
     }
     _size--;
-  }
+  }*/
   void pop_front() {
     if (_head == nullptr) {
       return;
@@ -81,7 +81,7 @@ public:
     }
     _size--;
   }
-  void insert(int index, T value) {
+  /*void insert(int index, T value) {
     if (index < 0 || index > _size) {
       return;
     } else if (index == 0) {
@@ -98,8 +98,8 @@ public:
       temp->next = new_elem;
       _size++;
     }
-  }
-  void remove(int index) {
+  }*/
+  /*void remove(int index) {
     if (index < 0 || index >= _size) {
       return;
     } else if (index == 0) {
@@ -116,8 +116,8 @@ public:
       delete to_delete;
       _size--;
     }
-  }
-  void remove(T value) {
+  }*/
+ /* void remove(T value) {
     Element<T> *temp = _head;
     int index = 0;
     while (temp != nullptr) {
@@ -128,7 +128,7 @@ public:
       temp = temp->next;
       index++;
     }
-  }
+  }*/
   void print() {
     Element<T> *temp = _head;
     while (temp != nullptr) {
@@ -137,7 +137,7 @@ public:
     }
     cout << endl;
   }
-  void dev_print() {
+  /*void dev_print() {
     int index = 0;
     Element<T> *temp = _head;
     while (temp != nullptr) {
@@ -149,5 +149,5 @@ public:
     }
     cout << endl;
   }
-  int size() { return _size; }
+  int size() { return _size; }*/
 };
