@@ -20,23 +20,8 @@
     <ClInclude Include="stack.h">
       <Filter>domain\model</Filter>
     </ClInclude>
-    <ClInclude Include="queue.h">
-      <Filter>domain\model</Filter>
-    </ClInclude>
     <ClInclude Include="libarary.h">
       <Filter>internal</Filter>
-    </ClInclude>
-    <ClInclude Include="priority_queue.h">
-      <Filter>domain\model</Filter>
-    </ClInclude>
-    <ClInclude Include="single_link_list.h">
-      <Filter>domain\model</Filter>
-    </ClInclude>
-    <ClInclude Include="doubly_linked_list.h">
-      <Filter>domain\model</Filter>
-    </ClInclude>
-    <ClInclude Include="binary_tree.h">
-      <Filter>domain\model</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

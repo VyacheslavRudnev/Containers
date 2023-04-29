@@ -131,12 +131,7 @@
     <ClCompile Include="application.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="binary_tree.h" />
-    <ClInclude Include="doubly_linked_list.h" />
     <ClInclude Include="libarary.h" />
-    <ClInclude Include="priority_queue.h" />
-    <ClInclude Include="queue.h" />
-    <ClInclude Include="single_link_list.h" />
     <ClInclude Include="stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

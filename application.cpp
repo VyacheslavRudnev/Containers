@@ -1,17 +1,55 @@
-#include "binary_tree.h"
-using namespace std;
+#include "stack.h"
 
-int main() {
-  binary_tree<int> tree;
+bool isMatchingPair(char, char);
+bool isBalanced(string);
 
-  tree.addNode(50);
-  tree.addNode(25);
-  tree.addNode(75);
-  tree.addNode(12);
-  tree.addNode(37);
-  tree.addNode(43);
-  tree.addNode(30);
+int main()
+{
+    string expression;
+    cout << "Enter an expression: ";
+    getline(cin, expression, ';');
 
-  tree.preOrderTraversal(tree.root);
-  return 0;
+    if (isBalanced(expression))
+    {
+        cout << "Expression is balanced." << endl;
+    }
+
+    return 0;
+}
+
+bool isMatchingPair(char char1, char char2) {
+    if (char1 == '(' && char2 == ')')
+        return true;
+    else if (char1 == '{' && char2 == '}')
+        return true;
+    else if (char1 == '[' && char2 == ']')
+        return true;
+    else
+        return false;
+}
+
+bool isBalanced(string expression) {
+    stack<char> s;
+    stack<char> mistake;
+
+    for (int i = 0; i < expression.length(); i++) {
+        if (expression[i] == '(' || expression[i] == '{' || expression[i] == '[')
+        {
+            s.push(expression[i]);
+            mistake.push(expression[i]);
+        }
+        else if (expression[i] == ')' || expression[i] == '}' || expression[i] == ']')
+        {
+            if (!isMatchingPair(s.top(), expression[i]))
+            {
+                cout << "Expression is not balanced." << endl;
+                cout << "Mistake : " << expression[i] << " at " << i << endl;
+                cout << "Expected char is : " << mistake.top() << endl;
+                return false;
+            }
+            else
+                s.pop();
+        }
+    }
+    return s.isEmpty();
 }
