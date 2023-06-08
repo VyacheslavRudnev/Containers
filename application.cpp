@@ -5,13 +5,14 @@ bool isBalanced(string);
 
 int main()
 {
+    ukr_lang;
     string expression;
-    cout << "Enter an expression: ";
+    print("Введіть вираз: ");
     getline(cin, expression, ';');
 
     if (isBalanced(expression))
     {
-        cout << "Expression is balanced." << endl;
+        println("Вираз збалансовано.");
     }
 
     return 0;
@@ -42,9 +43,9 @@ bool isBalanced(string expression) {
         {
             if (!isMatchingPair(s.top(), expression[i]))
             {
-                cout << "Expression is not balanced." << endl;
-                cout << "Mistake : " << expression[i] << " at " << i << endl;
-                cout << "Expected char is : " << mistake.top() << endl;
+                println("Вираз не збалансовано.");
+                println("Помилка з символом : '" << expression[i] << "' у " << i<< " комірці");
+                println("Очікований символ : " << mistake.top());
                 return false;
             }
             else
